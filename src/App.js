@@ -4,11 +4,20 @@ import './components/TodoItem';
 import TodoItem from './components/TodoItem';
 import './components/TodoItem.css';
 
+import TrafficLight from './components/TrafficLight'
+
+
+
 class App extends Component{
 
+  
   constructor(){
     super();
-    this.TodoLists = ['Test Case 1', 'Test Case 2', 'Test Case 3']; 
+    this.TodoLists = [
+      {tittle : 'Test Case 1' , isComplete : true, isSelected: false}, 
+      {tittle : 'Test Case 2', isSelected: false}, 
+      {tittle : 'Test Case 3', isSelected: false}
+    ]; 
   }
 
   render(){
@@ -16,8 +25,13 @@ class App extends Component{
     <div className="App">
         <h2>Test Case</h2>
         {
-          this.TodoLists.map((item, index) => <TodoItem key = {index} tittle = {item} />)
+          this.TodoLists.length > 0 && this.TodoLists.map((item, index) => <TodoItem key = {index} item = {item} />)
+        }
+         {
+          this.TodoLists.length === 0 && 'Nothing in here' 
          }
+
+         <TrafficLight />
       
     </div>
   );

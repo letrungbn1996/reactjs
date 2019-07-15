@@ -4,3 +4,11 @@
     color: #4d4d4d;
     font-weight: 300;
 }
+
+.TodoItem-complete{
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+.is-selected{
+    background: blue;
+}
