@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 import './App.css';
 import './components/TodoItem';
 import TodoItem from './components/TodoItem';
-
+import './components/TodoItem.css';
 
 class App extends Component{
 
