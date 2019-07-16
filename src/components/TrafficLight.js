@@ -34,7 +34,7 @@ class TrafficLight extends Component{
 
     render(){
         const { currentColor } = this.state;
-        console.log('Rendering', currentColor)
+        
         return <div className = "TrafficLight">
             <div className={classNames('bulb', 'red', {
                 'active' : currentColor === RED
